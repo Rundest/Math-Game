@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if(z > 0)
+        /*if(z > 0)
         {
             animator.SetBool("IsRunning", true);
         }
@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
+        */
 
     }
 }
