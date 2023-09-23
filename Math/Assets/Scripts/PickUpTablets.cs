@@ -23,7 +23,6 @@ public class PickUpTablets : MonoBehaviour
                 break;
             case 4:
                 tabletImages[3].GetComponent<RawImage>().color = Color.black;
-
                 break;
         } 
     }

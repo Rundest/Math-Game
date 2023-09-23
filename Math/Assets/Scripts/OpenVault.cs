@@ -5,15 +5,19 @@ using UnityEngine;
 public class OpenVault : MonoBehaviour
 {
     [SerializeField] private PickUpTablets pickUpTablets;
-    [SerializeField] private GameObject vaultEndPoint;
     [SerializeField] private float openSpeed;
+    private float yMovementPosition;
+
+    private void Start()
+    {
+        yMovementPosition = transform.position.y + 2;
+    }
 
     void Update()
     {
         if(pickUpTablets.tabletCount >= 4)
         {
-            Debug.Log("Moving");
-            transform.position = Vector3.MoveTowards(transform.position, vaultEndPoint.transform.position, Time.deltaTime * openSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, yMovementPosition, transform.position.z), Time.deltaTime * openSpeed);
         }
     }
 }
