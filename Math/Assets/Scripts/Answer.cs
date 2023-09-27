@@ -19,7 +19,7 @@ public class Answer : MonoBehaviour
     {
         if(collision.collider == player.GetComponent<CapsuleCollider>())
         {
-            StartCoroutine(manager.Answer(animator));
+            StartCoroutine(manager.Answer(gameObject));
         }
     }
 }
