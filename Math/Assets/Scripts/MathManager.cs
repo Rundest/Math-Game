@@ -9,6 +9,7 @@ public class MathManager : MonoBehaviour
     [SerializeField] private Animator falseAnsweranimator;
     [SerializeField] private MathProblemsSO[] mathProblems;
     [SerializeField] private Answer[] answersOfObjects;
+    [SerializeField] private AnswerSO[] answerSO;
     private int iteration = 0;
     private float points = 0;
 
@@ -30,6 +31,12 @@ public class MathManager : MonoBehaviour
         iteration++;
         UIManager.Instance.mathText.text = mathProblems[iteration].question;
 
+    }
+
+    private void ChangeAnswerText()
+    {
+        for(int i = 0; i < answersOfObjects.Length; i++)
+            answersOfObjects[i].answer = answerSO[iteration - 1].answers[i];
     }
 
     public IEnumerator Answer(GameObject answerGameObject)
@@ -60,5 +67,7 @@ public class MathManager : MonoBehaviour
         UIManager.Instance.mathText.color = Color.white;
 
         ChangeMathText();
+
+        ChangeAnswerText();
     }
 }
