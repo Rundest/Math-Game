@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 39.905, y: 0.364, z: -27.378}
+        value: {x: 39.905, y: 0.43528, z: -27.378}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -112,7 +112,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.364
+        value: 0.43528
         inSlope: 0
         outSlope: 0
         tangentMode: 136

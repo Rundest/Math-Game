@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class MathManager : MonoBehaviour
 {
-    [SerializeField] private Animator trueAnsweranimator;
-    [SerializeField] private Animator falseAnsweranimator;
     [SerializeField] private MathProblemsSO[] mathProblems;
     [SerializeField] private Answer[] answersOfObjects;
     [SerializeField] private AnswerSO[] answerSO;

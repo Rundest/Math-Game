@@ -766,8 +766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7800c173ecc795e4cb4d8e0a6f22902b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trueAnsweranimator: {fileID: 1752776392}
-  falseAnsweranimator: {fileID: 0}
   mathProblems:
   - {fileID: 11400000, guid: a49d4011860e0484dab7b8583b78cb4f, type: 2}
   - {fileID: 11400000, guid: b9465aa846d2dd440b68410a86833f26, type: 2}
@@ -780,6 +778,8 @@ MonoBehaviour:
   answerSO:
   - {fileID: 11400000, guid: a30915c4f24f0d344a86644eca12881f, type: 2}
   - {fileID: 11400000, guid: b3e09a8cb55c5c64bab1339ef11473ce, type: 2}
+  - {fileID: 11400000, guid: 05b165e2279183148bafea9f1dc60994, type: 2}
+  - {fileID: 11400000, guid: 12a49949d38a0a245b6f40035ccee360, type: 2}
 --- !u!4 &213778915
 Transform:
   m_ObjectHideFlags: 0
@@ -52217,6 +52217,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0e2af3b567e1e499e3d8f092e177ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1280221199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 3a352a4f0242fad47a055983ca08b524, type: 3}
+  m_PrefabInstance: {fileID: 759470884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1280221201
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280221199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 3a352a4f0242fad47a055983ca08b524, type: 3}
+--- !u!64 &1280221204
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280221199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 3a352a4f0242fad47a055983ca08b524, type: 3}
 --- !u!1 &1298241871
 GameObject:
   m_ObjectHideFlags: 0
@@ -52315,6 +52348,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298241871}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1361761809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 3a352a4f0242fad47a055983ca08b524, type: 3}
+  m_PrefabInstance: {fileID: 759470884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1361761814
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361761809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 3a352a4f0242fad47a055983ca08b524, type: 3}
 --- !u!1 &1379898913
 GameObject:
   m_ObjectHideFlags: 0
@@ -58159,11 +58211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a26e8ab56c8596f4f8afb5a00d83c8fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1752776392 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6967415811847503171, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
-  m_PrefabInstance: {fileID: 6967415813597102987}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1752776393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63474,6 +63521,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6967415811847503171, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967415811847503171, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6967415811847503178, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
       propertyPath: m_Name
       value: Answer (1)
@@ -69341,7 +69396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4057337241820342678, guid: 910546d7d15672d42995d19ff8681aef, type: 3}
       propertyPath: playerSpeed
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910546d7d15672d42995d19ff8681aef, type: 3}
@@ -69409,6 +69464,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6967415811847503171, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6967415811847503178, guid: d8c5889466547cd43a0cd961faf3986c, type: 3}
       propertyPath: m_Name
       value: Answer
