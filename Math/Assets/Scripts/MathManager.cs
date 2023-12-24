@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class MathManager : MonoBehaviour
 {
-    [SerializeField] private MathProblemsSO[] mathProblems;
+    public MathProblemsSO[] mathProblems;
     [SerializeField] private Answer[] answersOfObjects;
     [SerializeField] private AnswerSO[] answerSO;
-    private int iteration = 0;
+    [HideInInspector] public int iteration = 0;
     private float points = 0;
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class MathManager : MonoBehaviour
 
     private void ChangeMathText()
     {
-        if (iteration >= mathProblems.Length - 1) return;
+        //if (iteration >= mathProblems.Length - 1) return;
 
         iteration++;
         UIManager.Instance.mathText.text = mathProblems[iteration].question;
