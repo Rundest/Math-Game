@@ -18,10 +18,17 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded;
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+        }
     }
 
     void FixedUpdate()
@@ -37,10 +44,5 @@ public class PlayerMovement : MonoBehaviour
         float zMovement = z * playerSpeed * Time.deltaTime;
 
         transform.Translate(xMovement, 0, zMovement);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.AddForce(Vector3.up * jumpForce);
-        }
     }
 }

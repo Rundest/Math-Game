@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4057337241820342677}
-  mouseSensitivity: 200
+  mouseSensitivity: 2
 --- !u!114 &5490346376416815271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,9 +147,10 @@ GameObject:
   - component: {fileID: 8105777394454042820}
   - component: {fileID: 1696406812407473673}
   - component: {fileID: 4057337241820342678}
+  - component: {fileID: 2023399159}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 4057337241820342677}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 22.662098, y: 1.732, z: 10.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4057337242684962419}
@@ -199,7 +200,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2b52affab8494334191e5904293720ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,7 +250,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &4057337241820342678
 MonoBehaviour:
@@ -263,13 +264,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e466bf6417dd594eb9e29d9267477d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
-  jump: 1
+  playerSpeed: 6
+  jumpForce: 200
   groundCheck: {fileID: 4057337242684962419}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &2023399159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057337241820342677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c638f314eaf8c5b479e0ce892a1fd774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabletCount: 0
+  tabletImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4057337242684962418
 GameObject:
   m_ObjectHideFlags: 0
