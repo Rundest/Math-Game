@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43801c5177c360c49ac70e89db94be00
+guid: f224a6965d75fbe48845753ee5adbcf0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.006
-    second: {fileID: 2100000, guid: 87c35500adf9da24fb4049266151ff6f, type: 2}
+      name: Floor.001
+    second: {fileID: 2100000, guid: 3390435650a868d49972d9d063ce5209, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.009
-    second: {fileID: 2100000, guid: b50fbd132f44f1449a8d9dd13390d3b8, type: 2}
+      name: Roof.001
+    second: {fileID: 2100000, guid: ee0db405dd1938145ab65ad9687871fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.013
-    second: {fileID: 2100000, guid: e1782ddf704051c4d8fe58b120c7cc19, type: 2}
+      name: Walls.001
+    second: {fileID: 2100000, guid: 23cf077175658d145bb701d2ff0c793c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.015
-    second: {fileID: 2100000, guid: eddc7f5b94a534b4985ddc8d0592cd40, type: 2}
+      name: Walls.003
+    second: {fileID: 2100000, guid: 0a7b3f05fa37cae45a60368d4447141a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
