@@ -29,11 +29,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce);
         }
-
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            gameObject.transform.position = new Vector3(48.9700012f, 6.60999966f, 33.4900017f);
-        }
     }
 
     void FixedUpdate()

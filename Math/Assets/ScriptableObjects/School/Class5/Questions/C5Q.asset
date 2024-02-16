@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcaccb36b13c6d44ca65388964d973a6, type: 3}
   m_Name: C5Q
   m_EditorClassIdentifier: 
-  question: 1 + 1 =
-  answer: 2
+  question: "Cen\u0119 pewnego towaru obni\u017Cono najpierw o 30%, a p\xF3\u017Aniej
+    now\u0105 cen\u0119 obni\u017Cono o kolejne  40%. \u0141\u0105cznie pocz\u0105tkow\u0105
+    cen\u0119 obni\u017Cono o: "
+  answer: 58%

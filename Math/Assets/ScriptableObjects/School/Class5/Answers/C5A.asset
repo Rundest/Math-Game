@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C5A
   m_EditorClassIdentifier: 
   answers:
-  - 2
-  - 4
-  - 6
-  - 8
+  - '35% '
+  - 42%
+  - 58%
+  - 70%

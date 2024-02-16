@@ -38,15 +38,17 @@ public class AnswerChecker : MonoBehaviour
 
         for (int i = 0; i < mathSchool.answers.Length; i++)
         {
+            mathSchool.answers[i].TryGetComponent<Image>(out Image answersColor);
+
             if (mathSchool.answers[i].GetComponentInChildren<TextMeshProUGUI>().text == mathSchool.mathProblem.answer.ToString())
             {
-                mathSchool.answers[i].GetComponent<Image>().color = Color.green;
+               answersColor.color = Color.green;
             }
             else
             {
-                mathSchool.answers[i].GetComponent<Image>().color = Color.red;
+                answersColor.color = Color.red;
             }
-            mathSchool.answers[i].GetComponent<Button>().enabled = false;
+            mathSchool.answers[i].enabled = false;
         }
 
     }

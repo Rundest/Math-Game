@@ -7,7 +7,7 @@ public class Answer : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private MathManager manager;
     private Animator animator;
-    public float answer;
+    public string answer;
 
     private void Start()
     {

@@ -90,7 +90,7 @@ public class MathSchool : MonoBehaviour
     {
         for (int i = 0; i < answers.Length; i++)
         {
-            answers[i].GetComponent<Button>().enabled = true;
+            answers[i].enabled = true;
         }
     }
 
@@ -120,7 +120,7 @@ public class MathSchool : MonoBehaviour
     {
         for (int i = 0; i < answers.Length; i++)
         {
-            answers[i].GetComponentInChildren<TextMeshProUGUI>().text = answersSO.answers[i].ToString();        
+            answers[i].GetComponentInChildren<TextMeshProUGUI>().text = answersSO.answers[i].ToString();  
         }
     }
 }

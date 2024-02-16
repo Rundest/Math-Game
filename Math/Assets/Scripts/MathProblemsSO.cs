@@ -6,5 +6,5 @@ using UnityEngine;
 public class MathProblemsSO : ScriptableObject
 {
     public string question;
-    public float answer;
+    public string answer;
 }
