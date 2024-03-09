@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Math
-  - 
+  - Waypoint
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Waypoint
+    uniqueID: 173180001
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

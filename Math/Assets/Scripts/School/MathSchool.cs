@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +12,13 @@ public class MathSchool : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private GameObject mathPanel;
     [SerializeField] private PointText pointText;
-    public MathProblemsSO mathProblem;
-    [SerializeField] private AnswerSO answersSO;
-    [SerializeField] private TextMeshProUGUI question;
+    public MathProblemImageSO mathProblem;
+    public MathProblemImageSO mathProblemThreeFour;
+    public AnswerSO answersSO;
+    public AnswerSO answersSOThreeFour;
+    [SerializeField] private Image question;
     public Button[] answers;
-
+    [SerializeField] private TextMeshProUGUI eText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,24 +29,27 @@ public class MathSchool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (ActivePanelCheck() == false)
         {
             OpenPanel();
-            SettingUpQuestionText();
+            SettingUpQuestionImage();
             SettingUpButtonText();
         }
         else
         {
             ClosePanel();
+            ChangeText();
         }
-
-        Debug.Log(IsAnswered());
     }
 
     private bool ActivePanelCheck()
     {
         return mathPanel.activeInHierarchy ? true : false;
+    }
+
+    private void ChangeText()
+    {
+        eText.text = "Kliknij 'E' aby zamknac panel matematyczny";
     }
 
     private void OpenPanel()
@@ -80,7 +86,7 @@ public class MathSchool : MonoBehaviour
 
     private void ResetColors()
     {
-        for(int i = 0; i < answers.Length; i++)
+        for (int i = 0; i < answers.Length; i++)
         {
             answers[i].GetComponent<Image>().color = Color.white;
         }
@@ -98,7 +104,7 @@ public class MathSchool : MonoBehaviour
     {
         for (int i = 0; i < answers.Length; i++)
         {
-            if(answers[i].GetComponent<Image>().color != Color.white)
+            if (answers[i].GetComponent<Image>().color != Color.white)
             {
                 gameObject.layer = 0;
             }
@@ -111,16 +117,16 @@ public class MathSchool : MonoBehaviour
         return true;
     }
 
-    private void SettingUpQuestionText()
+    private void SettingUpQuestionImage()
     {
-        question.text = mathProblem.question;
+        question.sprite = mathProblem.question;
     }
 
     private void SettingUpButtonText()
     {
         for (int i = 0; i < answers.Length; i++)
         {
-            answers[i].GetComponentInChildren<TextMeshProUGUI>().text = answersSO.answers[i].ToString();  
+            answers[i].GetComponentInChildren<TextMeshProUGUI>().text = answersSO.answers[i].ToString();
         }
     }
 }

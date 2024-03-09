@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fourth
   m_EditorClassIdentifier: 
   answers:
-  - 17
-  - 18
-  - 19
-  - 20
+  - "5\u03C0/3"
+  - "35\u03C0/6"
+  - "20\u03C0/3"
+  - "20\u03C0/6"

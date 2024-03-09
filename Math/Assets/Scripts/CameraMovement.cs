@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -7,17 +9,9 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float mouseSensitivity;
     private float xRotation = 0;
-    [SerializeField] private float raycastLenght;
+    public float raycastLenght;
     [HideInInspector] public bool raycast;
     public RaycastHit raycastHit;
-    [SerializeField] private MathSchool mathSchool;
-
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
 
     // Update is called once per frame
     void Update()
@@ -32,16 +26,5 @@ public class CameraMovement : MonoBehaviour
         player.transform.Rotate(Vector3.up * mouseX);
 
         raycast = Physics.Raycast(gameObject.transform.position, transform.forward, out raycastHit, raycastLenght, LayerMask.GetMask("Math"));
-
-        if (raycast)
-        {
-            mathSchool = raycastHit.collider.GetComponent<MathSchool>();
-            mathSchool.enabled = true;
-        }
-        else
-        {
-            mathSchool.enabled = false;
-            mathSchool = null;
-        }
     }
 }

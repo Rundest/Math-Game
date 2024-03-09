@@ -11,6 +11,8 @@ public class AnswerChecker : MonoBehaviour
     public MathSchool mathSchool;
     [SerializeField] private CameraMovement playerCameraMovement;
     private TextMeshProUGUI answer;
+    [SerializeField] private GoalText goalText;
+    [SerializeField] private TextMeshProUGUI goalsText;
 
 
     // Start is called before the first frame update
@@ -31,6 +33,8 @@ public class AnswerChecker : MonoBehaviour
 
     public void ButtonClicked()
     {
+        goalText.iterator++;
+
         if (answer.text == mathSchool.mathProblem.answer.ToString())
         {
             pointText.points++;
@@ -51,5 +55,6 @@ public class AnswerChecker : MonoBehaviour
             mathSchool.answers[i].enabled = false;
         }
 
+        goalsText.text = "Rozwiazane zadania: " + goalText.iterator.ToString() + "/6";
     }
 }

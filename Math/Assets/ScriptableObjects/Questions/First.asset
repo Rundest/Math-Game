@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcaccb36b13c6d44ca65388964d973a6, type: 3}
   m_Name: First
   m_EditorClassIdentifier: 
-  question: 1 + 1 =
-  answer: 2
+  question: "Promie\u0144 ko\u0142a o obwodzie 25 \u03C0 cm ma d\u0142ugo\u015B\u0107:"
+  answer: 12,5 cm

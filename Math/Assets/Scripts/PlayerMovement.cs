@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float playerSpeed = 12f;
 
-    [SerializeField] private float jumpForce = 1f;
-
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] private float groundDistance = 0.4f;
@@ -21,14 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.AddForce(Vector3.up * jumpForce);
-        }
     }
 
     void FixedUpdate()

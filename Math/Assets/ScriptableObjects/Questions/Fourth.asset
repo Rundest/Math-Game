@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcaccb36b13c6d44ca65388964d973a6, type: 3}
   m_Name: Fourth
   m_EditorClassIdentifier: 
-  question: 6 + 10 =
-  answer: 16
+  question: "Jak\u0105 d\u0142ugo\u015B\u0107 ma zaznaczony na rysunku \u0142uk?"
+  answer: "20\u03C0/3"

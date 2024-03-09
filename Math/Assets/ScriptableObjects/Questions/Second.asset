@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcaccb36b13c6d44ca65388964d973a6, type: 3}
   m_Name: Second
   m_EditorClassIdentifier: 
-  question: '3 + 3 = '
-  answer: 6
+  question: "Ko\u0142o o polu 25\u03C0 ma \u015Brednic\u0119 o d\u0142ugo\u015Bci:"
+  answer: 10
