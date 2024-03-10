@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PointText : MonoBehaviour
 {
-    public int points;
+    public static int points;
 
     void Update()
     {

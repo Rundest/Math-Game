@@ -9,6 +9,7 @@ public class CloseFirstVault : MonoBehaviour
     [HideInInspector] public bool isInTrigger;
     [SerializeField] private GameObject waypoint;
     [SerializeField] private GoalText goalTextObject;
+    [SerializeField] private GameObject pointText;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class CloseFirstVault : MonoBehaviour
         isInTrigger = true;
         waypoint.SetActive(false);
         StartCoroutine(goalTextObject.ChangeTextColor());
+        pointText.SetActive(true);
     }
 
 }

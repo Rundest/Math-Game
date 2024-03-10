@@ -14,7 +14,7 @@ public class MathManager : MonoBehaviour
     [SerializeField] private ProblemsImageSO[] problemImageSO;
     [HideInInspector] public int iteration = 0;
     private GameObject player;
-    private float points = 0;
+    public static float points = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +78,7 @@ public class MathManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2);
 
-        UIManager.Instance.pointsText.text = points.ToString();
+        UIManager.Instance.pointsText.text = "Poprawne odpowiedzi: " + points.ToString();
 
         answerAnimator.SetTrigger(AnswerAnimations.deActivated);
 

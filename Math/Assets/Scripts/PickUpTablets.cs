@@ -11,7 +11,7 @@ public class PickUpTablets : MonoBehaviour
 
     private void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()

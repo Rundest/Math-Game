@@ -9,7 +9,7 @@ public class GoalText : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI goalText;
     [SerializeField] private BoxCollider closeFirstVault;
     [SerializeField] private string firstText;
-    public int iterator = 0;
+    public static int iterator = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,14 +17,6 @@ public class GoalText : MonoBehaviour
         goalText = GetComponent<TextMeshProUGUI>();
         goalText.text = firstText;
         goalText.color = Color.white;
-    }
-
-    private void Update()
-    {
-        if(iterator >= 6)
-        {
-
-        }
     }
 
     public IEnumerator ChangeTextColor()

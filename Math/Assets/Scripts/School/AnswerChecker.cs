@@ -11,7 +11,6 @@ public class AnswerChecker : MonoBehaviour
     public MathSchool mathSchool;
     [SerializeField] private CameraMovement playerCameraMovement;
     private TextMeshProUGUI answer;
-    [SerializeField] private GoalText goalText;
     [SerializeField] private TextMeshProUGUI goalsText;
 
 
@@ -33,11 +32,11 @@ public class AnswerChecker : MonoBehaviour
 
     public void ButtonClicked()
     {
-        goalText.iterator++;
+        GoalText.iterator++;
 
         if (answer.text == mathSchool.mathProblem.answer.ToString())
         {
-            pointText.points++;
+            PointText.points++;
         }
 
         for (int i = 0; i < mathSchool.answers.Length; i++)
@@ -55,6 +54,6 @@ public class AnswerChecker : MonoBehaviour
             mathSchool.answers[i].enabled = false;
         }
 
-        goalsText.text = "Rozwiazane zadania: " + goalText.iterator.ToString() + "/6";
+        goalsText.text = "Rozwiazane zadania: " + GoalText.iterator.ToString() + "/6";
     }
 }
